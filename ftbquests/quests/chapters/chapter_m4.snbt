@@ -1,0 +1,702 @@
+{
+	id: "403A5153A14B2B35"
+	group: "42A213AA17D37DAF"
+	order_index: 8
+	filename: "chapter_m4"
+	title: "魔法章节四：玄妙之道"
+	icon: {
+		id: "forbidden_arcanus:eternal_stella"
+		Count: 1b
+		tag: { }
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 1.0d
+			y: -1.0d
+			width: 50.0d
+			height: 50.0d
+			rotation: 0.0d
+			image: "kubejs:textures/m4.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 1.0d
+			y: -0.5d
+			width: 17.0d
+			height: 17.0d
+			rotation: 0.0d
+			image: "kubejs:textures/wowarcane.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			x: 1.01d
+			y: 3.0d
+			shape: "hexagon"
+			dependencies: ["00C03F43368B7053"]
+			size: 1.3d
+			id: "43B996DFEAF1948A"
+			tasks: [{
+				id: "1DE103B128306FB9"
+				type: "item"
+				item: {
+					id: "forbidden_arcanus:eternal_stella"
+					Count: 1b
+					tag: { }
+				}
+			}]
+			rewards: [
+				{
+					id: "56A18D7854B83964"
+					type: "item"
+					item: {
+						id: "forbidden_arcanus:eternal_stella"
+						Count: 1b
+						tag: { }
+					}
+					count: 2
+				}
+				{
+					id: "7114A6A448127244"
+					type: "item"
+					item: "kubejs:lootbag_arcane_3"
+					count: 3
+				}
+			]
+		}
+		{
+			x: 2.5d
+			y: 1.5d
+			shape: "diamond"
+			subtitle: "将经验颗粒反复辊压以得到石化经验球"
+			dependencies: ["2C7C88F0236ECBE8"]
+			hide: false
+			id: "28FC493A45BD131F"
+			tasks: [{
+				id: "73DC79C8863EC8D9"
+				type: "item"
+				item: "forbidden_arcanus:xpetrified_orb"
+			}]
+			rewards: [
+				{
+					id: "4D8B6294F45B7377"
+					type: "item"
+					item: "kubejs:lootbag_arcane_3"
+				}
+				{
+					id: "0D662DB14CE4A30A"
+					type: "item"
+					item: "forbidden_arcanus:xpetrified_orb"
+					count: 22
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 1.5d
+			dependencies: ["4FD232051F96C24C"]
+			id: "2C7C88F0236ECBE8"
+			tasks: [{
+				id: "67695868420C52BF"
+				type: "item"
+				item: "create:experience_nugget"
+			}]
+		}
+		{
+			title: "蠹虫"
+			x: 5.5d
+			y: -0.5d
+			subtitle: "如果你攻击了一只蠹虫，而附近有一块被感染的石头方块，那么这个被感染的石头方块将会变成一只蠹虫。"
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "641BC3313321273D"
+			tasks: [
+				{
+					id: "0B45A23F8AAECC3D"
+					type: "observation"
+					icon: "minecraft:silverfish_spawn_egg"
+					timer: 0L
+					observe_type: 5
+					to_observe: "minecraft:silverfish"
+				}
+				{
+					id: "468B19FB342B655F"
+					type: "item"
+					item: "minecraft:infested_stone"
+				}
+			]
+		}
+		{
+			x: 1.0d
+			y: 0.5d
+			shape: "diamond"
+			dependencies: ["65C7E03ECF451083"]
+			id: "5AAAB21891EA2755"
+			tasks: [{
+				id: "7BA832AEA7BCE080"
+				type: "item"
+				item: "minecraft:netherite_ingot"
+			}]
+			rewards: [
+				{
+					id: "4D7A73F26F2BF095"
+					type: "item"
+					item: "kubejs:lootbag_arcane_3"
+					count: 3
+				}
+				{
+					id: "71F01967D2E83E92"
+					type: "item"
+					item: "minecraft:netherite_ingot"
+				}
+			]
+		}
+		{
+			title: "观察魔源时空水晶。"
+			x: 1.0d
+			y: -1.5d
+			subtitle: "将时空水晶投入魔源中以制造魔源时空水晶。点击此任务以查看指南。"
+			description: ["魔源时空水晶（STC）将会转化为远古残骸，前提是你正确地进行处理。以下是具体步骤：STC具有10种可能的法术，它们在创建时会随机选择其中5种。现在，每次有法术经过魔源时空水晶时，它会检查该法术是否包含了5种已选的法术之一，如果是的话，魔源时空水晶会将该法术从列表中删除，并继续寻找其他法术。一旦你将所有法术都发射到水晶上，可以通过随机猜测法术或者nbt读取（目前尚未实现）来实现，它将转化为远古残骸。"]
+			dependencies: [
+				"089DD6C64F12E754"
+				"29202035B6E8F1EC"
+				"6E12EEAFC2CDFE97"
+				"7E46F7F5BA789182"
+				"79435910657C92F4"
+				"3A6A9739A9E26FF5"
+				"0FD64B8A181D9120"
+				"019D30162ADC2FEC"
+				"3B268C508D1A8E3A"
+				"6EBFF16CA4642166"
+				"71384DD64BC880DE"
+			]
+			id: "707DF250A92F24B7"
+			tasks: [{
+				id: "4A10DC6C64234848"
+				type: "observation"
+				title: "Look at the Source Time Crystal"
+				icon: "kubejs:source_time_crystal"
+				timer: 0L
+				observe_type: 0
+				to_observe: "cae:source_time_crystal"
+			}]
+			rewards: [{
+				id: "7F1B3718CC2EDDDD"
+				type: "item"
+				item: "kubejs:lootbag_create_brass"
+			}]
+		}
+		{
+			x: -1.0d
+			y: -6.0d
+			subtitle: "每次你击败傀儡，你都会得到紫水晶粉尘。"
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "27B2E5E119C5F23B"
+			tasks: [{
+				id: "0550AAB3C09C11F9"
+				type: "item"
+				item: "ars_nouveau:amethyst_golem_charm"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 1.5d
+			shape: "diamond"
+			subtitle: "通过将下界之星抛出建筑上限来制造流星碎片。"
+			dependencies: ["7010165D31CB43FD"]
+			id: "3882C0D9CAA0BE84"
+			tasks: [{
+				id: "36DD50161963A375"
+				type: "item"
+				item: "forbidden_arcanus:stellarite_piece"
+			}]
+			rewards: [
+				{
+					id: "6C414C96315DC8D0"
+					type: "item"
+					item: "forbidden_arcanus:stellarite_piece"
+					count: 8
+				}
+				{
+					id: "481DED478BB9490C"
+					type: "item"
+					item: "kubejs:lootbag_arcane_3"
+				}
+			]
+		}
+		{
+			x: -1.5d
+			y: 1.5d
+			subtitle: "相信我，自动化杀凋机会很有用的。硬化玻璃应该能帮大忙（哈哈，它们打不穿这个的）"
+			dependencies: [
+				"4F2C8B0FFE0646C4"
+				"76FF8A53B02CF2E0"
+			]
+			id: "7010165D31CB43FD"
+			tasks: [
+				{
+					id: "51952D91B2C03A08"
+					type: "item"
+					item: "minecraft:nether_star"
+				}
+				{
+					id: "413B632E02951B83"
+					type: "item"
+					title: "Any #thermal:glass/hardened"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "thermal:glass/hardened"
+						}
+					}
+					count: 16L
+				}
+			]
+			rewards: [
+				{
+					id: "64FE5C202DDAFFCA"
+					type: "item"
+					item: "minecraft:nether_star"
+					count: 3
+				}
+				{
+					id: "43BF4B8920FE9A32"
+					type: "item"
+					item: "kubejs:lootbag_arcane_3"
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: 2.0d
+			subtitle: "将骷髅置于灵魂火上，并将其放置在凋零玫瑰中，将使其转变为一个增强型凋零骷髅，其掉落额外的凋零头颅。"
+			dependencies: [
+				"7F7E6735DDC3712F"
+				"6988B2238F02E9EB"
+			]
+			id: "4F2C8B0FFE0646C4"
+			tasks: [{
+				id: "4162591AD61348EB"
+				type: "item"
+				item: "minecraft:wither_skeleton_skull"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 0.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "76FF8A53B02CF2E0"
+			tasks: [{
+				id: "41447EE7CD24E1AC"
+				type: "item"
+				item: "minecraft:soul_sand"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 3.0d
+			subtitle: "奥术转化"
+			dependencies: [
+				"62D9AAC8D4355173"
+				"562C3A36FCCAA7EA"
+			]
+			id: "6988B2238F02E9EB"
+			tasks: [{
+				id: "292C881A98EA45A6"
+				type: "item"
+				item: "minecraft:wither_rose"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 1.5d
+			shape: "gear"
+			dependencies: [
+				"28FC493A45BD131F"
+				"3882C0D9CAA0BE84"
+				"5AAAB21891EA2755"
+			]
+			id: "00C03F43368B7053"
+			tasks: [{
+				id: "59F30D2A3DBB9EBA"
+				type: "item"
+				item: "forbidden_arcanus:hephaestus_forge"
+			}]
+		}
+		{
+			title: "亡灵法术"
+			x: -2.0d
+			y: 3.5d
+			subtitle: "通过右键点击一只装备了灵魂的DavesBE骷髅，生成一个特别的骷髅。所有的生成骷髅将具有特别的掉落物，以维持循环。"
+			dependencies: [
+				"1D13EA7170FD3C81"
+				"68F10C80D3E640D7"
+			]
+			id: "7F7E6735DDC3712F"
+			tasks: [{
+				id: "499AF3EC17DBE82F"
+				type: "item"
+				item: "minecraft:skeleton_skull"
+			}]
+			rewards: [{
+				id: "391C3FF0A3E1D624"
+				type: "item"
+				item: "davebuildingmod:skeleton_2"
+				count: 4
+			}]
+		}
+		{
+			x: -2.0d
+			y: -1.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "3A6A9739A9E26FF5"
+			tasks: [{
+				id: "4CD481A2C55DB997"
+				type: "item"
+				item: "ars_nouveau:glyph_gravity"
+			}]
+		}
+		{
+			x: -1.0d
+			y: -2.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "3B268C508D1A8E3A"
+			tasks: [{
+				id: "72B17D56F5537DE8"
+				type: "item"
+				item: "ars_nouveau:glyph_ignite"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -2.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "6EBFF16CA4642166"
+			tasks: [{
+				id: "372998B3A22D11A4"
+				type: "item"
+				item: "ars_nouveau:glyph_intangible"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "089DD6C64F12E754"
+			tasks: [{
+				id: "48910D835E07A073"
+				type: "item"
+				item: "ars_nouveau:glyph_cold_snap"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -2.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "6E12EEAFC2CDFE97"
+			tasks: [{
+				id: "5E6EA0BEBE296674"
+				type: "item"
+				item: "ars_nouveau:glyph_crush"
+			}]
+		}
+		{
+			x: 4.0d
+			y: -1.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "79435910657C92F4"
+			tasks: [{
+				id: "24543DC722ECCA0D"
+				type: "item"
+				item: "ars_nouveau:glyph_freeze"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -1.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "0FD64B8A181D9120"
+			tasks: [{
+				id: "23D0BB0EC574D299"
+				type: "item"
+				item: "ars_nouveau:glyph_grow"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -1.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "7E46F7F5BA789182"
+			tasks: [{
+				id: "46782120421565B3"
+				type: "item"
+				item: "ars_nouveau:glyph_firework"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -2.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "29202035B6E8F1EC"
+			tasks: [{
+				id: "777A695F62EBF506"
+				type: "item"
+				item: "ars_nouveau:glyph_light"
+			}]
+		}
+		{
+			title: "任意小型花"
+			tags: ["flowers"]
+			x: -5.0d
+			y: 3.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "562C3A36FCCAA7EA"
+			tasks: [{
+				id: "5F5AE422BBD4F5C7"
+				type: "item"
+				title: "Any #minecraft:small_flowers"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:small_flowers"
+					}
+				}
+			}]
+		}
+		{
+			title: "凝怨之液桶"
+			x: -4.0d
+			y: 2.0d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "62D9AAC8D4355173"
+			tasks: [{
+				id: "3E4084D661F798C8"
+				type: "item"
+				item: "kubejs:liquid_resent_bucket"
+			}]
+		}
+		{
+			title: "重要提示"
+			x: 1.0d
+			y: -6.0d
+			subtitle: "这个章节的内容依赖于敌对生物（Hostile Mobs）的召唤。这意味着这个工厂只有在玩家附近才能正常运作，否则这些生物会消失！"
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "790F8C1BC091E6F7"
+			tasks: [{
+				id: "473AE3E4698E7DE2"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "489E662CE8AAC4DD"
+				type: "item"
+				item: "pneumaticcraft:spawner_agitator"
+			}]
+		}
+		{
+			x: -1.0d
+			y: -1.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "019D30162ADC2FEC"
+			tasks: [{
+				id: "5733167507C21CB6"
+				type: "item"
+				item: "ars_nouveau:glyph_hex"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 4.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "51B16B49FDE64745"
+			tasks: [{
+				id: "01401499E60E01BE"
+				type: "item"
+				item: "minecraft:bone_block"
+			}]
+		}
+		{
+			title: "任意种类Dave's Building Extended的骷髅"
+			x: -2.0d
+			y: 5.0d
+			dependencies: ["51B16B49FDE64745"]
+			id: "1D13EA7170FD3C81"
+			tasks: [
+				{
+					id: "7106A635AB6781C6"
+					type: "item"
+					item: "davebuildingmod:skeleton_1"
+				}
+				{
+					id: "65EABB18481B41B7"
+					type: "item"
+					item: "davebuildingmod:skeleton_2"
+				}
+				{
+					id: "6B4BBEB83374F1D0"
+					type: "item"
+					item: "davebuildingmod:skeleton_3"
+				}
+				{
+					id: "16892F5D4E2C1469"
+					type: "item"
+					item: "davebuildingmod:skeleton_5"
+				}
+				{
+					id: "6EB5E7D25A548DF0"
+					type: "item"
+					item: "davebuildingmod:skeleton_4"
+				}
+				{
+					id: "4908827078792E4B"
+					type: "item"
+					item: "davebuildingmod:skeleton_6"
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: 4.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "68F10C80D3E640D7"
+			tasks: [{
+				id: "60AA39316FA9D31D"
+				type: "item"
+				item: "forbidden_arcanus:soul"
+			}]
+		}
+		{
+			x: 1.0d
+			y: -3.0d
+			dependencies: ["26EFD55243E3D198"]
+			id: "71384DD64BC880DE"
+			tasks: [{
+				id: "7BB11A13B79C8748"
+				type: "item"
+				item: "kubejs:source_bucket"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 0.5d
+			subtitle: "你可以粉碎实体！粉碎蠹虫来获取经验颗粒也许是个不错的选择。"
+			dependencies: ["641BC3313321273D"]
+			id: "4FD232051F96C24C"
+			tasks: [{
+				id: "07AA3BF65DC6061F"
+				type: "item"
+				item: "create:crushing_wheel"
+			}]
+		}
+		{
+			x: 1.0d
+			y: -4.0d
+			dependencies: [
+				"67EB56E5BE508BE8"
+				"5C02EC87CD4EDBAE"
+			]
+			id: "26EFD55243E3D198"
+			tasks: [{
+				id: "07E5B0261CCF4478"
+				type: "item"
+				item: "cae:time_crystal"
+			}]
+			rewards: [
+				{
+					id: "4F8F1550E1FE3232"
+					type: "item"
+					item: "kubejs:lootbag_arcane_2"
+				}
+				{
+					id: "0B4AA3D9F5DCC2D8"
+					type: "item"
+					item: "cae:time_crystal"
+					count: 8
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: -4.5d
+			dependencies: ["28761261E7757DE8"]
+			id: "5C02EC87CD4EDBAE"
+			tasks: [{
+				id: "2CC6A8A695BC15B6"
+				type: "item"
+				item: "minecraft:amethyst_cluster"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -4.5d
+			dependencies: ["10F884D73B9DB540"]
+			hide: true
+			id: "67EB56E5BE508BE8"
+			tasks: [{
+				id: "75D102659F061BE6"
+				type: "item"
+				item: {
+					id: "tiab:time_in_a_bottle"
+					Count: 1b
+					tag: { }
+				}
+			}]
+		}
+		{
+			x: -1.0d
+			y: -5.0d
+			dependencies: ["27B2E5E119C5F23B"]
+			id: "28761261E7757DE8"
+			tasks: [{
+				id: "1008EF2B0D3A3469"
+				type: "item"
+				item: "create:crushing_wheel"
+			}]
+		}
+		{
+			x: 1.0d
+			y: -0.5d
+			dependencies: ["707DF250A92F24B7"]
+			id: "65C7E03ECF451083"
+			tasks: [{
+				id: "2371B4F600C6AC0C"
+				type: "item"
+				item: "minecraft:ancient_debris"
+			}]
+			rewards: [{
+				id: "02FBF2A31183E891"
+				type: "item"
+				item: "minecraft:ancient_debris"
+				count: 8
+			}]
+		}
+	]
+	quest_links: [ ]
+}
