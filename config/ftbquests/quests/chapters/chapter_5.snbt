@@ -14,7 +14,7 @@
 			width: 90.0d
 			height: 60.0d
 			rotation: 0.0d
-			image: "kubejs:textures/ARCANE_NEBULAE_by_betwizer.png"
+			image: "kubejs:textures/arcane_nebulae_by_betwizer.png"
 			hover: [ ]
 			click: ""
 			dev: false
